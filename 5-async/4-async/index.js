@@ -1,6 +1,16 @@
 async function fetchData(url) {
   // <-- start
-  // TODO 24: 通过await/async实现异步请求
+  //  通过await/async实现异步请求
+  // eslint-disable-next-line no-unused-expressions
+
+  const rs = await fetch(url);
+  const json = await rs.json();
+  if (rs.status === 200) {
+    document.writeln(json.name);
+  } else {
+    console.error(rs.statusText);
+  }
+
   // end -->
 }
 
