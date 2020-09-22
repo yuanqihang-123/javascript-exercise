@@ -9,6 +9,7 @@ function chooseNoRepeatNumber(collection) {
       // eslint-disable-next-line eqeqeq
       return num != arr[index + 1];
     });
+  // return ...[new Set(collection)]
 }
 
 export { chooseMultiplesOfThree, chooseNoRepeatNumber };
